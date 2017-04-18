@@ -32,10 +32,15 @@
 	<h3 class="center">lteagues@hawk.iit.edu</h3>
 	<div id="container">
 		<input id="entryinput" type="text" name="textentry" placeholder="Enter a Message">
-		<div id="entrybutton">Alert Me</div>
+		<div id="entrybutton" >Alert Me</div>
 		<h2 id="textoutput" class="center">Show results here</h2>
 	</div>
 	<script type="text/javascript">
+		document.getElementById("entrybutton").addEventListener("click", alertFunction);
+		
+		function alertFunction() {
+			document.getElementById("textoutput").textContent = document.getElementById("entryinput").value;
+			document.getElementById("result").textContent = document.getElementById("name").textContent+": "+document.getElementById("entrynput").value;
 		
 	</script>
 </body>
